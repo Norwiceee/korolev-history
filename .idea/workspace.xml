@@ -5,33 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e17c91ad-0742-4e47-8d96-729052c50927" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/migrations/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/feedback.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/gallery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/pages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/quiz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/timeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/components/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/components/SectionNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/components/Starfield.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/_app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/achievements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/biography.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/documents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/feedback.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/gallery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/quiz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/timeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/docs/dummy.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/docs/prikaz_sputnik.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/pdf.worker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747268272311</updated>
-      <workItem from="1747268273313" duration="11515000" />
+      <workItem from="1747268273313" duration="15257000" />
     </task>
     <servers />
   </component>
