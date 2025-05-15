@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import CloseIcon from "@mui/icons-material/Close";
+import {SectionNavigation} from "../components/SectionNavigation";
 
 const images = [
     {
@@ -163,6 +164,10 @@ export default function GalleryPage() {
                     </Typography>
                 )}
             </Dialog>
+            <SectionNavigation
+                prev={{ href: "/biography", label: "Биография" }}
+                next={{ href: "/Achievements", label: "Достижения" }}
+            />
         </Container>
     );
 }
