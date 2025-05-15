@@ -166,7 +166,7 @@ export default function GalleryPage() {
             </Dialog>
             <SectionNavigation
                 prev={{ href: "/biography", label: "Биография" }}
-                next={{ href: "/Achievements", label: "Достижения" }}
+                next={{ href: "/achievements", label: "Достижения" }}
             />
         </Container>
     );
