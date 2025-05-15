@@ -1,0 +1,23 @@
+{
+  "name": "korolev-history-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^5.14.0",
+    "@mui/lab": "^5.0.0-alpha.164",
+    "@mui/material": "^5.17.1",
+    "axios": "^1.6.0",
+    "next": "^13.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-pdf": "^9.2.1",
+    "react-vertical-timeline-component": "^3.5.3"
+  }
+}
