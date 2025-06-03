@@ -1,15 +1,23 @@
 import React from "react";
-import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Button, Grid, Paper, Stack } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
 import QuizIcon from "@mui/icons-material/Quiz";
+import LoginIcon from "@mui/icons-material/Login";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import Link from "next/link";
-import {SectionNavigation} from "../components/SectionNavigation";
+import { useAuth } from "../components/AuthContext";
+import Image from "next/image";
+import { useRouter } from "next/router";
+
 
 export default function Home() {
+
+    const { user, logout } = useAuth();
+    const router = useRouter();
     return (
         <Box
             sx={{
@@ -20,6 +28,29 @@ export default function Home() {
                 alignItems: "center"
             }}
         >
+            {/* ВЕРХНИЙ БЛОК */}
+            <Box sx={{
+                position: "absolute",
+                top: 32,
+                right: 48,
+                zIndex: 2,
+            }}>
+                {user && (
+                    <Button
+                        variant="text"
+                        sx={{ minWidth: 0, p: 0 }}
+                        onClick={() => router.push("/profile")}
+                    >
+                        <Image
+                            src="/images/profile_icon.png" // Помести иконку!
+                            width={40}
+                            height={40}
+                            alt="Профиль"
+                            style={{ borderRadius: "50%", background: "#eee" }}
+                        />
+                    </Button>
+                )}
+            </Box>
             <Container maxWidth="md">
                 <Paper
                     elevation={8}
@@ -168,12 +199,49 @@ export default function Home() {
                             </Link>
                         </Grid>
                     </Grid>
+                    {/* --- ЗАМЕНИТЬ ВОТ ЭТОТ БЛОК --- */}
+                    {/* Стек с кнопками входа/регистрации — показывать только если нет user */}
+                    {!user && (
+                        <Stack direction="row" spacing={3} justifyContent="center" sx={{ mb: 2 }}>
+                            <Link href="/login" passHref legacyBehavior>
+                                <Button
+                                    size="large"
+                                    variant="contained"
+                                    color="primary"
+                                    startIcon={<LoginIcon />}
+                                    sx={{
+                                        borderRadius: 4,
+                                        fontWeight: 700,
+                                        px: 4,
+                                    }}
+                                >
+                                    Войти
+                                </Button>
+                            </Link>
+                            <Link href="/register" passHref legacyBehavior>
+                                <Button
+                                    size="large"
+                                    variant="outlined"
+                                    color="primary"
+                                    startIcon={<PersonAddIcon />}
+                                    sx={{
+                                        borderRadius: 4,
+                                        fontWeight: 700,
+                                        px: 4,
+                                    }}
+                                >
+                                    Регистрация
+                                </Button>
+                            </Link>
+                        </Stack>
+                    )}
+                    {/* --- КОНЕЦ БЛОКА --- */}
+
                     <Typography align="center" sx={{ color: "#aaa", fontSize: "0.95rem" }}>
                         © {new Date().getFullYear()} Проект «Королёв и Космос» | Cделано с любовью к истории и науке 🚀
                     </Typography>
                 </Paper>
             </Container>
         </Box>
-
     );
 }

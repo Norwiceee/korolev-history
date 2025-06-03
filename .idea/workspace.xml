@@ -4,18 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e17c91ad-0742-4e47-8d96-729052c50927" name="Changes" comment="" />
+    <list default="true" id="e17c91ad-0742-4e47-8d96-729052c50927" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/AuthContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/migrations/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/migrations/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/feedback.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/feedback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/pages.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/pages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/timeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2x6pFKafLMbMy7Ke2uZxx0eMxLr" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -24,21 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/norwice/WebstormProjects/Korolev/frontend/public/docs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/norwice/WebstormProjects/Korolev/frontend/public/docs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/public/docs" />
@@ -62,11 +86,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747268272311</updated>
-      <workItem from="1747268273313" duration="15773000" />
+      <workItem from="1747268273313" duration="23359000" />
+      <workItem from="1747783888769" duration="1702000" />
+      <workItem from="1748905105558" duration="7012000" />
+      <workItem from="1748951906264" duration="4973000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/Header.js</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

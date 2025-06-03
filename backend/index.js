@@ -8,11 +8,15 @@ import feedbackRoutes from "./routes/feedback.js";
 import galleryRoutes from "./routes/gallery.js";
 import pagesRoutes from "./routes/pages.js";
 import timelineRoutes from "./routes/timeline.js";
+import authRouter from './routes/auth.js';
+import quizRouter from './routes/quiz.js';
+
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use('/api/auth', authRouter);
+app.use('/api/quiz', quizRouter);
 app.use("/api/quiz", quizRoutes);
 app.use("/api/feedback", feedbackRoutes);
 app.use("/api/gallery", galleryRoutes);

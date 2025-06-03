@@ -1,24 +1,15 @@
-// pages/_app.js
-import * as React from "react";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
+import { AuthProvider } from "../components/AuthContext"; // проверь путь!
 
-const theme = createTheme({
-    palette: {
-        mode: "light",
-        primary: { main: "#283593" },
-        secondary: { main: "#ff6f00" }
-    },
-    typography: {
-        fontFamily: "Montserrat, Roboto, Arial, sans-serif"
-    }
-});
+const theme = createTheme(); // создаёт дефолтную тему MUI
 
-export default function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Component {...pageProps} />
+            <AuthProvider>
+                <Component {...pageProps} />
+            </AuthProvider>
         </ThemeProvider>
     );
 }
