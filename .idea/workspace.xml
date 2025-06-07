@@ -5,44 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e17c91ad-0742-4e47-8d96-729052c50927" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/admin-feedback.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/bookings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/documents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/quizzes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/slots.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/AdminNavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-booking.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-documents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-feedback.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-gallery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-quiz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/bookings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/quiz/[id].js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/public/uploads/document-1749151899252.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/migrations/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/migrations/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/bookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/bookings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/quiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/AuthContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/documents.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/documents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/quiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-gallery.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +81,7 @@
       <workItem from="1749106807835" duration="2846000" />
       <workItem from="1749110055518" duration="6831000" />
       <workItem from="1749133844263" duration="35126000" />
-      <workItem from="1749308859216" duration="6769000" />
+      <workItem from="1749308859216" duration="9527000" />
     </task>
     <servers />
   </component>

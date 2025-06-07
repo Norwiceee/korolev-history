@@ -113,16 +113,26 @@ router.patch('/:id', requireAuth, requireRole('admin'), async (req, res) => {
     }
 });
 
-// (Админ) Удалить слот (если нет броней)
+// (Админ) Удалить слот (мероприятие) с поддержкой force=1
 router.delete('/slots/:id', requireAuth, requireRole('admin'), async (req, res) => {
     const { id } = req.params;
+    const force = req.query.force === "1" || req.query.force === "true";
     try {
-        const bookings = await db.query('SELECT COUNT(*) as count FROM bookings WHERE slot_id = $1', [id]);
-        if (Number(bookings.rows[0].count) > 0) {
+        const bookingsRes = await db.query('SELECT COUNT(*) as count FROM bookings WHERE slot_id = $1', [id]);
+        const bookingsCount = Number(bookingsRes.rows[0].count);
+
+        if (bookingsCount > 0 && !force) {
             return res.status(400).json({ error: 'Слот уже содержит бронирования' });
         }
+
+        let deletedCount = 0;
+        if (bookingsCount > 0 && force) {
+            const del = await db.query('DELETE FROM bookings WHERE slot_id = $1 RETURNING id', [id]);
+            deletedCount = del.rows.length;
+        }
+
         await db.query('DELETE FROM booking_slots WHERE id = $1', [id]);
-        res.json({ message: 'Слот удалён' });
+        res.json({ message: 'Слот и связанные бронирования удалены', bookingsDeleted: deletedCount });
     } catch (err) {
         console.error('Ошибка удаления слота:', err);
         res.status(500).json({ error: 'Ошибка удаления слота' });
@@ -147,6 +157,7 @@ router.delete('/:id', requireAuth, requireRole('admin'), async (req, res) => {
         res.status(500).json({ error: 'Ошибка отмены брони' });
     }
 });
+
 // (Админ) Редактировать слот
 router.patch('/slots/:id', requireAuth, requireRole('admin'), async (req, res) => {
     const { id } = req.params;
@@ -168,6 +179,5 @@ router.patch('/slots/:id', requireAuth, requireRole('admin'), async (req, res) =
         res.status(500).json({ error: 'Ошибка обновления слота' });
     }
 });
-
 
 export default router;

@@ -47,11 +47,17 @@ export default function AdminBookings() {
             .finally(() => setLoading(false));
 
         // Слоты (мероприятия)
+        fetchSlots();
+    }, [user]);
+
+    // Получение всех слотов
+    const fetchSlots = () => {
+        setSlotsLoading(true);
         fetch("http://localhost:4000/api/bookings/slots")
             .then(res => res.json())
             .then(setSlots)
             .finally(() => setSlotsLoading(false));
-    }, [user]);
+    };
 
     // Добавить новый слот
     const handleAddSlot = async (e) => {
@@ -67,13 +73,9 @@ export default function AdminBookings() {
         });
         const data = await res.json();
         if (res.ok) {
-            setSlots([...slots, { ...newSlot, ...data, id: data.id || Date.now() }]);
             setNewSlot({ event_title: "", slot_datetime: "", capacity: 10, description: "" });
             setSlotMsg("Мероприятие добавлено");
-            // Перезапросить слоты (чтобы увидеть id и booked_count)
-            fetch("http://localhost:4000/api/bookings/slots")
-                .then(res => res.json())
-                .then(setSlots);
+            fetchSlots();
         } else {
             setSlotMsg(data.error || "Ошибка");
         }
@@ -103,27 +105,47 @@ export default function AdminBookings() {
         const data = await res.json();
         if (res.ok) {
             setEditDialog(false);
-            // Обновим список слотов
-            fetch("http://localhost:4000/api/bookings/slots")
-                .then(res => res.json())
-                .then(setSlots);
+            fetchSlots();
         } else {
             alert(data.error || "Ошибка");
         }
     };
 
-    // Удалить слот (мероприятие)
+    // Удалить слот (мероприятие) — с подтверждением, если есть бронирования
     const handleDeleteSlot = async (id) => {
-        if (!window.confirm("Удалить это мероприятие? (если нет бронирований)")) return;
-        const res = await fetch(`http://localhost:4000/api/bookings/slots/${id}`, {
-            method: "DELETE",
-            headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
-        });
-        const data = await res.json();
-        if (res.ok) {
-            setSlots(slots.filter(s => s.id !== id));
+        const slot = slots.find(s => s.id === id);
+        if (!slot) return;
+
+        if (slot.booked_count > 0) {
+            if (!window.confirm(
+                `На это мероприятие уже есть ${slot.booked_count} бронирований!\nУдалить мероприятие вместе со всеми этими бронированиями?`
+            )) return;
+
+            // Удалить с параметром force
+            const res = await fetch(`http://localhost:4000/api/bookings/slots/${id}?force=1`, {
+                method: "DELETE",
+                headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+            });
+            const data = await res.json();
+            if (res.ok) {
+                fetchSlots();
+                alert(`Удалено мероприятие и ${data.bookingsDeleted || 0} бронирований`);
+            } else {
+                alert(data.error || "Ошибка удаления");
+            }
         } else {
-            alert(data.error || "Ошибка удаления");
+            if (!window.confirm("Удалить это мероприятие?")) return;
+            const res = await fetch(`http://localhost:4000/api/bookings/slots/${id}`, {
+                method: "DELETE",
+                headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+            });
+            const data = await res.json();
+            if (res.ok) {
+                fetchSlots();
+                alert("Мероприятие удалено");
+            } else {
+                alert(data.error || "Ошибка удаления");
+            }
         }
     };
 
