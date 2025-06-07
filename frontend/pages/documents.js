@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     Box, Typography, Paper, Grid, Container, Button, InputAdornment,
     TextField, Dialog, DialogTitle, DialogContent, IconButton, Slide, Link
@@ -8,37 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import { SectionNavigation } from "../components/SectionNavigation";
 
-const documents = [
-    {
-        title: "Приказ о запуске первого спутника",
-        description: "Официальный приказ о запуске первого искусственного спутника Земли.",
-        date: "1957-09-17",
-        file: "/docs/prikaz_sputnik.pdf",
-        source: "https://iki.cosmos.ru/sites/default/files/publications/2007pervaya_r.pdf"
-    },
-    {
-        title: "Письмо С.П. Королёва родителям",
-        description: "Личное письмо Сергея Павловича Королёва родителям.",
-        date: "1961-03-05",
-        file: "/docs/letter_to_parents.pdf",
-        source: "https://kosmonavtika.com/autres/korolev/lettres.html"
-    },
-    {
-        title: "Чертёж ракеты Р-7",
-        description: "Инженерный чертёж межконтинентальной баллистической ракеты Р-7.",
-        date: "1955-11-10",
-        file: "/docs/r7_shema.pdf",
-        source: "https://www.russianspaceweb.com/r7.html"
-    },
-    {
-        title: "Статья в «Правде»: Триумф космонавтики",
-        description: "Публикация о достижениях советской космической программы.",
-        date: "1961-04-13",
-        file: "/docs/pravda_article.pdf",
-        source: "https://rusneb.ru/catalog/000199_000009_006072652/"
-    }
-];
-
+// ---- Утилита для форматирования даты ----
 function formatDateRu(dateString) {
     if (!dateString) return '';
     const d = new Date(dateString);
@@ -52,18 +22,26 @@ function formatDateRu(dateString) {
     return `${day} ${month} ${year}`;
 }
 
+// ---- Анимация для диалога ----
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function DocumentsPage() {
+    const [documents, setDocuments] = useState([]);
     const [search, setSearch] = useState('');
     const [open, setOpen] = useState(false);
     const [selectedDoc, setSelectedDoc] = useState(null);
 
+    useEffect(() => {
+        fetch("http://localhost:4000/api/documents")
+            .then(res => res.json())
+            .then(setDocuments);
+    }, []);
+
     const filteredDocs = documents.filter(doc =>
-        doc.title.toLowerCase().includes(search.toLowerCase()) ||
-        doc.description.toLowerCase().includes(search.toLowerCase())
+        (doc.title || "").toLowerCase().includes(search.toLowerCase()) ||
+        (doc.description || "").toLowerCase().includes(search.toLowerCase())
     );
 
     const handlePreview = (doc) => {
@@ -81,6 +59,7 @@ export default function DocumentsPage() {
             <Typography variant="h4" align="center" gutterBottom>
                 Документы
             </Typography>
+
             <Box sx={{ mb: 3, display: "flex", justifyContent: "center" }}>
                 <TextField
                     placeholder="Поиск по названию или описанию..."
@@ -110,9 +89,11 @@ export default function DocumentsPage() {
                                     {formatDateRu(doc.date)}
                                 </Typography>
                                 <Typography variant="body1">{doc.description}</Typography>
-                                <Typography variant="body2" sx={{ mt: 1 }}>
-                                    <b>Источник:</b> <Link href={doc.source} target="_blank" rel="noopener">{doc.source}</Link>
-                                </Typography>
+                                {doc.source && (
+                                    <Typography variant="body2" sx={{ mt: 1 }}>
+                                        <b>Источник:</b> <Link href={doc.source} target="_blank" rel="noopener">{doc.source}</Link>
+                                    </Typography>
+                                )}
                             </Box>
                             <Button
                                 variant="outlined"
@@ -125,7 +106,7 @@ export default function DocumentsPage() {
                             <Button
                                 variant="contained"
                                 color="primary"
-                                href={doc.file}
+                                href={`http://localhost:4000${doc.file_url}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 sx={{ ml: 2, minWidth: 100 }}
@@ -157,11 +138,11 @@ export default function DocumentsPage() {
                     </IconButton>
                 </DialogTitle>
                 <DialogContent sx={{ pt: 2, height: 600 }}>
-                    {selectedDoc?.file ? (
+                    {selectedDoc?.file_url ? (
                         <Box sx={{ width: "100%", height: 560 }}>
                             <iframe
-                                src={selectedDoc.file}
-                                title={selectedDoc.title}
+                                src={`http://localhost:4000${selectedDoc?.file_url || ""}`}
+                                title={selectedDoc?.title}
                                 width="100%"
                                 height="100%"
                                 style={{ border: "none", borderRadius: 8, background: "#333" }}

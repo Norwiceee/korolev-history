@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     Box,
     Typography,
@@ -10,53 +10,31 @@ import {
     DialogContent,
     IconButton,
     Fade,
-    Backdrop
+    Backdrop,
+    Skeleton,
+    Tooltip,
+    useMediaQuery,
+    useTheme,
 } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import CloseIcon from "@mui/icons-material/Close";
-import {SectionNavigation} from "../components/SectionNavigation";
-
-const images = [
-    {
-        src: "/images/korolev1.jpg",
-        title: "Сергей Павлович Королёв (портрет)",
-        description: "Главный конструктор советской космической программы."
-    },
-    {
-        src: "/images/korolev2.jpg",
-        title: "Королёв на работе",
-        description: "Королёв в процессе работы с техникой, около 1960-х годов."
-    },
-    {
-        src: "/images/korolev3.jpg",
-        title: "Королёв на старте «Восток-6»",
-        description: "С.П. Королёв на стартовой позиции во время запуска космического корабля «Восток-6», 1963 г."
-    },
-    {
-        src: "/images/achievement1.jpg",
-        title: "Первый выход в открытый космос",
-        description: "Алексей Леонов совершает первый в мире выход в открытый космос, 1965 г."
-    },
-    {
-        src: "/images/achievement2.jpg",
-        title: "Первая женщина-космонавт",
-        description: "Валентина Терешкова — первая женщина-космонавт."
-    },
-    {
-        src: "/images/achievement3.jpg",
-        title: "К.Э. Циолковский, С.П. Королёв, Ю.А. Гагарин",
-        description: "Основатели и герои советской космонавтики."
-    },
-    {
-        src: "/images/achievement4.jpg",
-        title: "Запуск спутника",
-        description: "С.П. Королёв на фоне первого спутника Земли."
-    }
-];
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import { SectionNavigation } from "../components/SectionNavigation";
 
 export default function GalleryPage() {
+    const [images, setImages] = useState([]);
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+    useEffect(() => {
+        fetch("http://localhost:4000/api/gallery")
+            .then((res) => res.json())
+            .then(data => { setImages(data); setLoading(false); })
+            .catch(() => { setImages([]); setLoading(false); });
+    }, []);
 
     const handleOpen = (img) => {
         setSelected(img);
@@ -69,55 +47,95 @@ export default function GalleryPage() {
     };
 
     return (
-        <Container maxWidth="lg" sx={{ py: 6 }}>
-            <Typography variant="h4" align="center" gutterBottom>
-                Галерея достижений и событий
-            </Typography>
-            <Typography variant="subtitle1" align="center" color="text.secondary" sx={{ mb: 4 }}>
-                Фотографии из жизни С.П. Королёва, запусков и истории космонавтики
-            </Typography>
-            <ImageList
-                variant="masonry"
-                cols={3}
-                gap={20}
+        <Container maxWidth="lg" sx={{ py: { xs: 3, md: 6 }, minHeight: "90vh" }}>
+            <Box
                 sx={{
-                    mx: "auto",
-                    maxWidth: 1100,
+                    textAlign: "center",
+                    mb: 2,
+                    position: "relative",
                 }}
             >
-                {images.map((img, i) => (
-                    <ImageListItem key={i} sx={{ cursor: "pointer", transition: "0.2s", "&:hover img": { transform: "scale(1.05)" } }}>
-                        <Box sx={{ overflow: "hidden", borderRadius: 4, boxShadow: 3 }}>
-                            <img
-                                src={img.src}
-                                alt={img.title}
-                                loading="lazy"
-                                style={{
-                                    width: "100%",
-                                    height: "auto",
-                                    display: "block",
-                                    transition: "transform 0.3s",
-                                }}
-                                onClick={() => handleOpen(img)}
-                            />
-                        </Box>
-                        <ImageListItemBar
-                            title={img.title}
-                            subtitle={img.description}
-                            actionIcon={
-                                <IconButton sx={{ color: "rgba(255,255,255,0.85)" }} onClick={() => handleOpen(img)}>
-                                    <ZoomInIcon />
-                                </IconButton>
-                            }
+                <CameraAltIcon sx={{ color: "primary.main", fontSize: 48, mb: 1 }} />
+                <Typography variant="h3" fontWeight={800} color="primary" gutterBottom>
+                    Галерея достижений и событий
+                </Typography>
+                <Typography
+                    variant="h6"
+                    color="text.secondary"
+                    sx={{
+                        mb: 3,
+                        maxWidth: 650,
+                        mx: "auto",
+                        fontWeight: 400,
+                        fontSize: { xs: "1.05rem", md: "1.15rem" }
+                    }}
+                >
+                    Уникальные фото из жизни С.&nbsp;П.&nbsp;Королёва, запусков и истории космонавтики. Каждый снимок — часть великой эпохи!
+                </Typography>
+            </Box>
+            {loading ? (
+                <GridLoadingGallery />
+            ) : (
+                <ImageList
+                    variant="masonry"
+                    cols={isMobile ? 1 : 3}
+                    gap={24}
+                    sx={{
+                        mx: "auto",
+                        maxWidth: 1200,
+                        mb: 2,
+                    }}
+                >
+                    {images.map((img, i) => (
+                        <ImageListItem
+                            key={i}
                             sx={{
-                                borderRadius: "0 0 16px 16px",
-                                background: "rgba(0,0,0,0.6)"
+                                cursor: "pointer",
+                                transition: "0.2s",
+                                borderRadius: 6,
+                                "&:hover img": { transform: "scale(1.045)" },
+                                boxShadow: "0 4px 36px -6px #3949ab22",
+                                overflow: "hidden"
                             }}
-                        />
-                    </ImageListItem>
-                ))}
-            </ImageList>
-            {/* Modal for viewing the image */}
+                        >
+                            <Box sx={{ overflow: "hidden", borderRadius: 6 }}>
+                                <img
+                                    src={`http://localhost:4000${img.image_url || img.src}`}
+                                    alt={img.title || "Фото"}
+                                    loading="lazy"
+                                    style={{
+                                        width: "100%",
+                                        height: "auto",
+                                        display: "block",
+                                        transition: "transform 0.35s cubic-bezier(.22,.68,.65,1.11)",
+                                    }}
+                                    onClick={() => handleOpen(img)}
+                                />
+                            </Box>
+                            <ImageListItemBar
+                                title={img.title}
+                                subtitle={img.description}
+                                actionIcon={
+                                    <Tooltip title="Увеличить">
+                                        <IconButton
+                                            sx={{ color: "rgba(255,255,255,0.90)", mr: 1 }}
+                                            onClick={() => handleOpen(img)}
+                                        >
+                                            <ZoomInIcon />
+                                        </IconButton>
+                                    </Tooltip>
+                                }
+                                sx={{
+                                    borderRadius: "0 0 16px 16px",
+                                    background:
+                                        "linear-gradient(0deg, rgba(25,25,50,0.75) 90%, rgba(25,25,50,0.08) 100%)"
+                                }}
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+            )}
+            {/* Модальное окно увеличения фото */}
             <Dialog
                 open={open}
                 onClose={handleClose}
@@ -127,7 +145,7 @@ export default function GalleryPage() {
                 BackdropComponent={Backdrop}
                 BackdropProps={{
                     timeout: 500,
-                    sx: { backgroundColor: "rgba(0,0,0,0.85)" }
+                    sx: { backgroundColor: "rgba(12,15,32,0.98)" }
                 }}
                 PaperProps={{
                     sx: { background: "transparent", boxShadow: "none", p: 0 }
@@ -135,39 +153,66 @@ export default function GalleryPage() {
             >
                 <IconButton
                     onClick={handleClose}
-                    sx={{ position: "absolute", right: 24, top: 16, color: "white", zIndex: 2 }}
+                    sx={{ position: "absolute", right: 28, top: 24, color: "#fff", zIndex: 2, bgcolor: "#23295188", "&:hover": { bgcolor: "#3949ab" } }}
                 >
                     <CloseIcon fontSize="large" />
                 </IconButton>
-                <DialogContent sx={{ p: 0, display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <DialogContent
+                    sx={{
+                        p: 0,
+                        pt: 6,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        minHeight: "65vh"
+                    }}
+                >
                     {selected && (
-                        <img
-                            src={selected.src}
-                            alt={selected.title}
-                            style={{
-                                maxWidth: "90vw",
-                                maxHeight: "80vh",
-                                borderRadius: 12,
-                                boxShadow: "0 6px 40px rgba(0,0,0,0.45)"
-                            }}
-                        />
+                        <>
+                            <img
+                                src={`http://localhost:4000${selected.image_url || selected.src}`}
+                                alt={selected.title}
+                                style={{
+                                    maxWidth: "92vw",
+                                    maxHeight: "70vh",
+                                    borderRadius: 16,
+                                    boxShadow: "0 10px 56px 0 #000a",
+                                    marginBottom: 16
+                                }}
+                            />
+                            <Typography variant="h6" align="center" sx={{ color: "#fff", mb: 0.5, fontWeight: 700, textShadow: "0 3px 12px #23295190" }}>
+                                {selected.title}
+                            </Typography>
+                            <Typography variant="body1" align="center" sx={{ color: "#eee", mb: 2, fontWeight: 400, textShadow: "0 2px 8px #23295170" }}>
+                                {selected.description}
+                            </Typography>
+                        </>
                     )}
                 </DialogContent>
-                {selected && (
-                    <Typography variant="h6" align="center" sx={{ color: "white", my: 2 }}>
-                        {selected.title}
-                    </Typography>
-                )}
-                {selected && (
-                    <Typography variant="body1" align="center" sx={{ color: "white", mb: 3 }}>
-                        {selected.description}
-                    </Typography>
-                )}
             </Dialog>
             <SectionNavigation
                 prev={{ href: "/biography", label: "Биография" }}
                 next={{ href: "/achievements", label: "Достижения" }}
             />
         </Container>
+    );
+}
+
+// Красивый скелетон загрузки
+function GridLoadingGallery() {
+    return (
+        <Box sx={{ mt: 5, mb: 6, display: "flex", gap: 5, justifyContent: "center", flexWrap: "wrap" }}>
+            {[1, 2, 3, 4, 5, 6].map((n) => (
+                <Skeleton
+                    key={n}
+                    variant="rectangular"
+                    width={320}
+                    height={220 + Math.round(Math.random() * 60)}
+                    animation="wave"
+                    sx={{ borderRadius: 6, boxShadow: "0 4px 36px -6px #3949ab22" }}
+                />
+            ))}
+        </Box>
     );
 }
