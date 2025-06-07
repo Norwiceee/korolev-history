@@ -27,7 +27,8 @@ router.post('/slots', requireAuth, requireRole('admin'), async (req, res) => {
         );
         res.json({ message: 'Слот добавлен' });
     } catch (err) {
-        res.status(500).json({ error: 'Ошибка создания слота' });
+        console.error('Ошибка создания слота:', err);
+        res.status(500).json({ error: 'Ошибка создания слота', details: err.message });
     }
 });
 
