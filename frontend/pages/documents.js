@@ -106,7 +106,7 @@ export default function DocumentsPage() {
                             <Button
                                 variant="contained"
                                 color="primary"
-                                href={`http://localhost:4000${doc.file_url}`}
+                                href={`http://89.104.65.59${doc.file_url}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 sx={{ ml: 2, minWidth: 100 }}
@@ -141,7 +141,7 @@ export default function DocumentsPage() {
                     {selectedDoc?.file_url ? (
                         <Box sx={{ width: "100%", height: 560 }}>
                             <iframe
-                                src={`http://localhost:4000${selectedDoc?.file_url || ""}`}
+                                src={`http://89.104.65.59${selectedDoc?.file_url || ""}`}
                                 title={selectedDoc?.title}
                                 width="100%"
                                 height="100%"

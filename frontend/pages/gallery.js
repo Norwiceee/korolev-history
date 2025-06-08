@@ -100,7 +100,7 @@ export default function GalleryPage() {
                         >
                             <Box sx={{ overflow: "hidden", borderRadius: 6 }}>
                                 <img
-                                    src={`http://localhost:4000${img.image_url || img.src}`}
+                                    src={`http://89.104.65.59${img.image_url || img.src}`}
                                     alt={img.title || "Фото"}
                                     loading="lazy"
                                     style={{
@@ -171,7 +171,7 @@ export default function GalleryPage() {
                     {selected && (
                         <>
                             <img
-                                src={`http://localhost:4000${selected.image_url || selected.src}`}
+                                src={`http://89.104.65.59${selected.image_url || selected.src}`}
                                 alt={selected.title}
                                 style={{
                                     maxWidth: "92vw",

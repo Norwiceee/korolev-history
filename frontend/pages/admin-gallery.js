@@ -129,7 +129,7 @@ export default function AdminGalleryUpload() {
                     {images.map(img => (
                         <ImageListItem key={img.id}>
                             <img
-                                src={`http://localhost:4000${img.image_url || img.src}`}
+                                src={`http://89.104.65.59${img.image_url || img.src}`}
                                 alt={img.description}
                                 style={{ borderRadius: 8, width: "100%" }}
                             />

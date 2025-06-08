@@ -11,7 +11,7 @@ export default function FeedbackPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:4000/api/feedback", form);
+        await axios.post("http://89.104.65.59/api/feedback", form);
         setSent(true);
         setForm({ name: "", email: "", message: "" });
     };
