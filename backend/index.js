@@ -30,6 +30,15 @@ app.use("/api/admin", adminRouter);
 app.use("/api/quizzes", quizzesRouter);
 app.use("/api/profile", profileRouter);
 app.use("/api/admin/feedback", adminFeedbackRouter);
+app.use(cors({
+    origin: [
+        "http://89.104.65.59:3000",
+        "http://89.104.65.59:4000",
+        "http://89.104.65.59",
+        "http://localhost:3000"
+    ],
+    credentials: true
+}));
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
