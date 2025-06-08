@@ -20,12 +20,12 @@ export default function BookingsPage() {
     const [openDialog, setOpenDialog] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:4000/api/bookings/slots')
+        fetch('http://89.104.65.59:4000/api/bookings/slots')
             .then(res => res.json())
             .then(setSlots);
 
         if (user) {
-            fetch('http://localhost:4000/api/bookings', {
+            fetch('http://89.104.65.59:4000/api/bookings', {
                 headers: { 'Authorization': `Bearer ${token}` }
             })
                 .then(res => res.json())
@@ -45,7 +45,7 @@ export default function BookingsPage() {
     const handleBooking = async (e) => {
         e.preventDefault();
         setMessage("");
-        const res = await fetch('http://localhost:4000/api/bookings', {
+        const res = await fetch('http://89.104.65.59:4000/api/bookings', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export default function BookingsPage() {
         if (res.ok) {
             setMessage("Бронь успешно создана!");
             setOpenDialog(false);
-            fetch('http://localhost:4000/api/bookings', {
+            fetch('http://89.104.65.59:4000/api/bookings', {
                 headers: { 'Authorization': `Bearer ${token}` }
             })
                 .then(res => res.json())

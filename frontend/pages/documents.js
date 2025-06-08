@@ -34,7 +34,7 @@ export default function DocumentsPage() {
     const [selectedDoc, setSelectedDoc] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:4000/api/documents")
+        fetch("http://89.104.65.59:4000/api/documents")
             .then(res => res.json())
             .then(setDocuments);
     }, []);

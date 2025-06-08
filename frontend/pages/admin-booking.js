@@ -39,7 +39,7 @@ export default function AdminBookings() {
             return;
         }
         // Бронирования
-        fetch("http://localhost:4000/api/bookings/all", {
+        fetch("http://89.104.65.59:4000/api/bookings/all", {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         })
             .then(res => res.json())
@@ -53,7 +53,7 @@ export default function AdminBookings() {
     // Получение всех слотов
     const fetchSlots = () => {
         setSlotsLoading(true);
-        fetch("http://localhost:4000/api/bookings/slots")
+        fetch("http://89.104.65.59:4000/api/bookings/slots")
             .then(res => res.json())
             .then(setSlots)
             .finally(() => setSlotsLoading(false));
@@ -63,7 +63,7 @@ export default function AdminBookings() {
     const handleAddSlot = async (e) => {
         e.preventDefault();
         setSlotMsg("");
-        const res = await fetch("http://localhost:4000/api/bookings/slots", {
+        const res = await fetch("http://89.104.65.59:4000/api/bookings/slots", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -89,7 +89,7 @@ export default function AdminBookings() {
 
     // Сохранить изменения слота
     const handleEditSlot = async () => {
-        const res = await fetch(`http://localhost:4000/api/bookings/slots/${editSlot.id}`, {
+        const res = await fetch(`http://89.104.65.59:4000/api/bookings/slots/${editSlot.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -122,7 +122,7 @@ export default function AdminBookings() {
             )) return;
 
             // Удалить с параметром force
-            const res = await fetch(`http://localhost:4000/api/bookings/slots/${id}?force=1`, {
+            const res = await fetch(`http://89.104.65.59:4000/api/bookings/slots/${id}?force=1`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
             });
@@ -135,7 +135,7 @@ export default function AdminBookings() {
             }
         } else {
             if (!window.confirm("Удалить это мероприятие?")) return;
-            const res = await fetch(`http://localhost:4000/api/bookings/slots/${id}`, {
+            const res = await fetch(`http://89.104.65.59:4000/api/bookings/slots/${id}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
             });
@@ -151,7 +151,7 @@ export default function AdminBookings() {
 
     // Изменить статус брони
     const handleStatus = (id, status) => {
-        fetch(`http://localhost:4000/api/bookings/${id}`, {
+        fetch(`http://89.104.65.59:4000/api/bookings/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

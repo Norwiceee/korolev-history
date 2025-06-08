@@ -22,7 +22,7 @@ export default function AdminGalleryUpload() {
     // Получить список фото
     const fetchImages = async () => {
         try {
-            const res = await fetch("http://localhost:4000/api/gallery");
+            const res = await fetch("http://89.104.65.59:4000/api/gallery");
             if (!res.ok) throw new Error("Ошибка получения галереи");
             const data = await res.json();
             setImages(data);
@@ -44,7 +44,7 @@ export default function AdminGalleryUpload() {
             const formData = new FormData();
             formData.append("image", file);
             formData.append("description", description);
-            const res = await fetch("http://localhost:4000/api/gallery/upload", {
+            const res = await fetch("http://89.104.65.59:4000/api/gallery/upload", {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -70,7 +70,7 @@ export default function AdminGalleryUpload() {
     const handleDelete = async (id) => {
         if (!window.confirm("Удалить это фото?")) return;
         try {
-            const res = await fetch(`http://localhost:4000/api/gallery/${id}`, {
+            const res = await fetch(`http://89.104.65.59:4000/api/gallery/${id}`, {
                 method: "DELETE",
                 headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
             });

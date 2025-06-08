@@ -51,7 +51,7 @@ function AdminDocumentForm({ onUpload }) {
         Object.entries(form).forEach(([k, v]) => data.append(k, v));
         data.append("file", file);
 
-        const res = await fetch("http://localhost:4000/api/documents", {
+        const res = await fetch("http://89.104.65.59:4000/api/documents", {
             method: "POST",
             headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` },
             body: data
@@ -128,7 +128,7 @@ function AdminDocumentEditForm({ doc, onClose, onSaved }) {
     const handleSubmit = async e => {
         e.preventDefault();
         setError(""); setSuccess("");
-        const res = await fetch(`http://localhost:4000/api/documents/${doc.id}`, {
+        const res = await fetch(`http://89.104.65.59:4000/api/documents/${doc.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -204,7 +204,7 @@ export default function AdminDocumentsPage() {
     const [editDoc, setEditDoc] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:4000/api/documents")
+        fetch("http://89.104.65.59:4000/api/documents")
             .then(res => res.json())
             .then(setDocuments);
     }, [reload]);
@@ -217,7 +217,7 @@ export default function AdminDocumentsPage() {
     // --- удалить документ ---
     const handleDelete = async (id) => {
         if (!window.confirm("Удалить документ?")) return;
-        const res = await fetch(`http://localhost:4000/api/documents/${id}`, {
+        const res = await fetch(`http://89.104.65.59:4000/api/documents/${id}`, {
             method: "DELETE",
             headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
         });

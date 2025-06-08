@@ -23,7 +23,7 @@ export default function AdminQuizPage() {
 
     // Получить все квизы
     const fetchQuizzes = () => {
-        fetch("http://localhost:4000/api/quizzes")
+        fetch("http://89.104.65.59:4000/api/quizzes")
             .then(res => res.json())
             .then(data => {
                 setQuizzes(data);
@@ -34,7 +34,7 @@ export default function AdminQuizPage() {
     // Получить вопросы выбранного квиза
     const fetchQuestions = (quizId) => {
         if (!quizId) return setQuestions([]);
-        fetch(`http://localhost:4000/api/quizzes/${quizId}/questions`)
+        fetch(`http://89.104.65.59:4000/api/quizzes/${quizId}/questions`)
             .then(res => res.json())
             .then(setQuestions);
     };
@@ -53,7 +53,7 @@ export default function AdminQuizPage() {
     const handleCreateQuiz = async (e) => {
         e.preventDefault();
         setMessage("");
-        const res = await fetch("http://localhost:4000/api/quizzes", {
+        const res = await fetch("http://89.104.65.59:4000/api/quizzes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -94,7 +94,7 @@ export default function AdminQuizPage() {
         e.preventDefault();
         setMessage("");
         if (!activeQuizId) return setMessage("Сначала выберите квиз.");
-        const res = await fetch(`http://localhost:4000/api/quizzes/${activeQuizId}/questions`, {
+        const res = await fetch(`http://89.104.65.59:4000/api/quizzes/${activeQuizId}/questions`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -120,7 +120,7 @@ export default function AdminQuizPage() {
 
     const handleDelete = async (id) => {
         if (!window.confirm("Удалить этот вопрос?")) return;
-        await fetch(`http://localhost:4000/api/quizzes/${activeQuizId}/questions/${id}`, {
+        await fetch(`http://89.104.65.59:4000/api/quizzes/${activeQuizId}/questions/${id}`, {
             method: "DELETE",
             headers: { Authorization: `Bearer ${token}` }
         });
@@ -146,7 +146,7 @@ export default function AdminQuizPage() {
     const handleEditQuestion = async (e) => {
         e.preventDefault();
         if (!editId) return;
-        const res = await fetch(`http://localhost:4000/api/quizzes/${activeQuizId}/questions/${editId}`, {
+        const res = await fetch(`http://89.104.65.59:4000/api/quizzes/${activeQuizId}/questions/${editId}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -185,7 +185,7 @@ export default function AdminQuizPage() {
                                     color="error"
                                     onClick={async () => {
                                         if (window.confirm(`Удалить квиз "${q.title}" и все вопросы?`)) {
-                                            await fetch(`http://localhost:4000/api/quizzes/${q.id}`, {
+                                            await fetch(`http://89.104.65.59:4000/api/quizzes/${q.id}`, {
                                                 method: "DELETE",
                                                 headers: { Authorization: `Bearer ${token}` }
                                             });

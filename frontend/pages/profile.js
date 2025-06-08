@@ -23,10 +23,10 @@ export default function ProfilePage() {
         }
         const token = localStorage.getItem("token");
         Promise.all([
-            fetch("http://localhost:4000/api/quizzes/results/my", {
+            fetch("http://89.104.65.59:4000/api/quizzes/results/my", {
                 headers: { Authorization: `Bearer ${token}` }
             }).then(res => res.json()),
-            fetch("http://localhost:4000/api/profile/bookings", {
+            fetch("http://89.104.65.59:4000/api/profile/bookings", {
                 headers: { Authorization: `Bearer ${token}` }
             }).then(res => res.json())
         ]).then(([quizResults, bookings]) => {

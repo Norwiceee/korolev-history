@@ -27,7 +27,7 @@ export default function AdminFeedback() {
             router.replace("/");
             return;
         }
-        fetch("http://localhost:4000/api/admin/feedback", {
+        fetch("http://89.104.65.59:4000/api/admin/feedback", {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
         })
             .then(res => res.json())

@@ -6,10 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="e17c91ad-0742-4e47-8d96-729052c50927" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/bookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/bookings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/backend/routes/gallery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-documents.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-documents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-feedback.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-feedback.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin-quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/bookings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/bookings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/documents.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/documents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/quiz/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/quiz/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Салтанов - Разработка исторического веб-сайта про С.П. Королева - 3/Korolev/frontend/pages/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +91,8 @@
       <workItem from="1749106807835" duration="2846000" />
       <workItem from="1749110055518" duration="6831000" />
       <workItem from="1749133844263" duration="35126000" />
-      <workItem from="1749308859216" duration="9527000" />
+      <workItem from="1749308859216" duration="12591000" />
+      <workItem from="1749385436367" duration="1166000" />
     </task>
     <servers />
   </component>

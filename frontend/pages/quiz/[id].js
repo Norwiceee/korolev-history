@@ -26,12 +26,12 @@ export default function QuizPage() {
         if (!id) return;
 
         // Получаем данные о квизе
-        fetch(`http://localhost:4000/api/quizzes/${id}`)
+        fetch(`http://89.104.65.59:4000/api/quizzes/${id}`)
             .then(res => res.json())
             .then(setQuiz);
 
         // Получаем вопросы
-        fetch(`http://localhost:4000/api/quizzes/${id}/questions`)
+        fetch(`http://89.104.65.59:4000/api/quizzes/${id}/questions`)
             .then(res => res.json())
             .then(qs => {
                 setQuestions(qs);
@@ -54,7 +54,7 @@ export default function QuizPage() {
                 0
             );
 
-            fetch(`http://localhost:4000/api/quizzes/${id}/results`, {
+            fetch(`http://89.104.65.59:4000/api/quizzes/${id}/results`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

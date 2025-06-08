@@ -30,7 +30,7 @@ export default function GalleryPage() {
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
     useEffect(() => {
-        fetch("http://localhost:4000/api/gallery")
+        fetch("http://89.104.65.59:4000/api/gallery")
             .then((res) => res.json())
             .then(data => { setImages(data); setLoading(false); })
             .catch(() => { setImages([]); setLoading(false); });

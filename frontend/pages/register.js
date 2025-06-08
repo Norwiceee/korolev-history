@@ -19,7 +19,7 @@ export default function Register() {
 
     // Проверка: есть ли уже админ
     useEffect(() => {
-        fetch("http://localhost:4000/api/auth/has-admin")
+        fetch("http://89.104.65.59:4000/api/auth/has-admin")
             .then(res => res.json())
             .then(data => setHasAdmin(data.hasAdmin))
             .catch(() => setHasAdmin(true)); // Если ошибка — не давать создать админа
@@ -30,7 +30,7 @@ export default function Register() {
         setError("");
         setLoading(true);
         try {
-            const res = await fetch("http://localhost:4000/api/auth/register", {
+            const res = await fetch("http://89.104.65.59:4000/api/auth/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, email, password, role })

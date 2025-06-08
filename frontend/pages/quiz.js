@@ -9,7 +9,7 @@ export default function QuizListPage() {
     const router = useRouter();
 
     useEffect(() => {
-        fetch("http://localhost:4000/api/quizzes")
+        fetch("http://89.104.65.59:4000/api/quizzes")
             .then(res => res.json())
             .then(setQuizzes)
             .finally(() => setLoading(false));
